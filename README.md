@@ -2,7 +2,13 @@
 
 This repo contains a small Linux script for reading and decoding the Apple Magic Trackpad battery/status HID report.
 
-Run it with:
+For everyday use, run the quiet reader:
+
+```bash
+sudo ./trackpad_battery.py
+```
+
+For the full diagnostic output, run:
 
 ```bash
 sudo ./decode_magic_trackpad_battery.py
