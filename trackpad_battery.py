@@ -218,14 +218,14 @@ def upower_reading() -> BatteryReading | None:
 def main() -> int:
     reading = direct_hid_reading() or upower_reading()
     if not reading:
-        print("Magic Trackpad battery: unavailable")
         print("Path: no direct HID report or fresh UPower value found")
+        print("Magic Trackpad battery: unavailable")
         return 1
 
-    print(f"Magic Trackpad battery: {reading.percent}%")
     print(f"Path: {reading.path} ({reading.detail})")
     if reading.status:
         print(f"Status: {reading.status}")
+    print(f"Magic Trackpad battery: {reading.percent}%")
     return 0
 
 
